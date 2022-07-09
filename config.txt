@@ -1,0 +1,30 @@
+typescript
+------------
+
+npm i typescript ts-loader
+
+tsc --init
+
+---------------------------------------------------
+
+webpack
+--------
+
+npm i -D webpack webpack-cli webpack-dev-server
+
+npm i html-webpack-plugin copy-webpack-plugin clean-webpack-plugin
+
+npm i style-loader css-loader sass-loader file-loader sass
+
+------------------------------------------------------------------------
+
+JSON
+------
+
+"scripts": {
+    "test": "echo 'Error: no test specified' && exit 1",
+    "build": "webpack",
+    "start": "webpack serve"
+  }
+
+  -----------------------------------------------------------

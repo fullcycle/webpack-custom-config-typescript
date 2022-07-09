@@ -1,0 +1,1 @@
+{"version":3,"file":"main.bundle.js","mappings":";;;;;;;AAAA,IAAM,KAAK,GAAY,aAAa;AAEpC,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC","sources":["webpack://webpack-custom-config-typescript/./src/index.ts"],"sourcesContent":["const hello : string = 'Hello World'\n\nconsole.log(hello);\n"],"names":[],"sourceRoot":""}
