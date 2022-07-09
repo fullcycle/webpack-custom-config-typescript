@@ -1,20 +1,20 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main : path.join(__dirname, "./src/index.ts")
+    main: path.join(__dirname, 'src/index.ts'),
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js"
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
       {
-        test: /.ts/,
+        test: /\.ts/,
         exclude: /(node_modules)/,
         use: ['ts-loader'],
       },
@@ -33,7 +33,7 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: "file-loader",
       }
-    ]
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -46,19 +46,19 @@ module.exports = {
       ]
     }),
     new HtmlWebpackPlugin({
-      filename : "index.html",
-      template: path.resolve(__dirname, "./src/index.html"),
-    })
+      filename: "index.html",
+      template: path.join(__dirname, './src/index.html'),
+    }),
   ],
-  stats: "minimal",
-  devtool: "source-map",
-  mode: "development",
+  stats: 'minimal',
+  devtool: 'source-map',
+  mode: 'development',
   devServer: {
-    static: path.resolve(__dirname, './dist'),
     open: true,
+    static: path.resolve(__dirname, './dist'),
     port: 4000,
     historyApiFallback: {
       index: 'index.html'
     }
-  }
+  },
 };
